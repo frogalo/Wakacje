@@ -51,7 +51,7 @@ export async function PUT(
         const transformedOffer = {
             id: offer.id,
             values: offer.values.reduce(
-                (acc: Record<string, string>, value) => {
+                (acc: Record<string, string>, value: { fieldId: string; value: string }) => {
                     acc[value.fieldId] = value.value;
                     return acc;
                 },
