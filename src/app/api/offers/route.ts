@@ -12,10 +12,10 @@ export async function GET() {
         })
 
         // Transform the data to match the frontend format
-        const transformedOffers = offers.map(offer => ({
+        const transformedOffers = offers.map((offer: { id: string; values: { fieldId: string; value: string }[] }) => ({
             id: offer.id,
             // Restructure values from array to object keyed by fieldId
-            values: offer.values.reduce((acc, value) => {
+            values: offer.values.reduce((acc: Record<string, string>, value: { fieldId: string; value: string }) => {
                 acc[value.fieldId] = value.value
                 return acc
             }, {} as Record<string, string>)
@@ -55,7 +55,7 @@ export async function POST(request: NextRequest) {
         // Transform the response to match the expected frontend format
         const transformedOffer = {
             id: offer.id,
-            values: offer.values.reduce((acc, value) => {
+            values: offer.values.reduce((acc: Record<string, string>, value: { fieldId: string; value: string }) => {
                 acc[value.fieldId] = value.value
                 return acc
             }, {} as Record<string, string>)
