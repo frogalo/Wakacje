@@ -1,0 +1,41 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Column {
+  id        String   @id @default(cuid())
+  fieldId   String   @unique // The field identifier (like "destination", "hotel", etc.)
+  label     String
+  icon      String?
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("columns")
+}
+
+model Offer {
+  id        String       @id @default(cuid())
+  createdAt DateTime     @default(now())
+  updatedAt DateTime     @updatedAt
+  values    OfferValue[]
+
+  @@map("offers")
+}
+
+model OfferValue {
+  id      String @id @default(cuid())
+  offerId String
+  fieldId String // References Column.fieldId
+  value   String @default("")
+
+  offer Offer @relation(fields: [offerId], references: [id], onDelete: Cascade)
+
+  @@unique([offerId, fieldId])
+  @@map("offer_values")
+}
