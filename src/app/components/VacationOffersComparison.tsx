@@ -5,7 +5,7 @@ import {
     MapPin, Globe, Building, Calendar, Users, DollarSign,
     Bed, Plane, Hash, Utensils, Navigation, Star, Wifi,
     Plus, Trash2, Edit3, Save, Sparkles, Heart, Loader2,
-    Grid3X3, LayoutGrid, ChevronDown, ChevronUp, TrendingUp,
+    Grid3X3, LayoutGrid, ChevronDown, ChevronUp,
     Award, Car, Home, Coffee, Camera, Shield, Info,
     CheckCircle, XCircle, ExternalLink, Phone
 } from "lucide-react";
