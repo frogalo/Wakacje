@@ -9,7 +9,7 @@ export async function PUT(
 ) {
     try {
         const { values } = await request.json();
-        const { id } = await params; // Await the params Promise
+        const { id } = await params;
 
         // Basic validation for ID from URL params
         if (!id) {
@@ -50,10 +50,13 @@ export async function PUT(
         // Transform the response to match the expected frontend format
         const transformedOffer = {
             id: offer.id,
-            values: offer.values.reduce((acc, value) => {
-                acc[value.fieldId] = value.value;
-                return acc;
-            }, {} as Record<string, string>),
+            values: offer.values.reduce(
+                (acc: Record<string, string>, value) => {
+                    acc[value.fieldId] = value.value;
+                    return acc;
+                },
+                {} as Record<string, string>
+            ),
         };
 
         return NextResponse.json(transformedOffer);
@@ -74,7 +77,7 @@ export async function DELETE(
     { params }: { params: Promise<{ id: string }> }
 ) {
     try {
-        const { id } = await params; // Await the params Promise
+        const { id } = await params;
 
         // Basic validation for ID from URL params
         if (!id) {

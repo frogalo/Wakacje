@@ -501,17 +501,17 @@ const VacationOffersComparison: React.FC = () => {
                                         </button>
                                     </div>
 
-                                    <button
-                                        className={`px-4 py-2 rounded-2xl flex items-center space-x-2 transition-all ${
-                                            comparisonMode
-                                                ? 'bg-purple-500 text-white'
-                                                : 'bg-slate-700 text-slate-300 hover:bg-slate-600 hover:text-white'
-                                        }`}
-                                        onClick={() => setComparisonMode(!comparisonMode)}
-                                    >
-                                        <TrendingUp className="w-4 h-4" />
-                                        <span>Porównaj ceny</span>
-                                    </button>
+                                    {/*<button*/}
+                                    {/*    className={`px-4 py-2 rounded-2xl flex items-center space-x-2 transition-all ${*/}
+                                    {/*        comparisonMode*/}
+                                    {/*            ? 'bg-purple-500 text-white'*/}
+                                    {/*            : 'bg-slate-700 text-slate-300 hover:bg-slate-600 hover:text-white'*/}
+                                    {/*    }`}*/}
+                                    {/*    onClick={() => setComparisonMode(!comparisonMode)}*/}
+                                    {/*>*/}
+                                    {/*    <TrendingUp className="w-4 h-4" />*/}
+                                    {/*    <span>Porównaj ceny</span>*/}
+                                    {/*</button>*/}
                                 </>
                             )}
 
