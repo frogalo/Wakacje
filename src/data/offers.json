@@ -1,0 +1,37 @@
+{
+  "columns": [
+    { "id": "destination", "label": "Cel", "icon": "MapPin" },
+    { "id": "country", "label": "Kraj", "icon": "Globe" },
+    { "id": "hotel", "label": "Hotel", "icon": "Building" },
+    { "id": "dates", "label": "Termin", "icon": "Calendar" },
+    { "id": "people", "label": "Osoby", "icon": "Users" },
+    { "id": "price", "label": "Cena", "icon": "DollarSign" },
+    { "id": "room_details", "label": "Szczegóły pokoju", "icon": "Bed" },
+    { "id": "flight_details", "label": "Szczegóły lotu", "icon": "Plane" },
+    { "id": "hotel_code", "label": "Kod hotelu", "icon": "Hash" },
+    { "id": "board", "label": "Wyżywienie", "icon": "Utensils" },
+    { "id": "location", "label": "Lokalizacja", "icon": "Navigation" },
+    { "id": "rating", "label": "Ocena", "icon": "Star" },
+    { "id": "amenities", "label": "Udogodnienia", "icon": "Wifi" }
+  ],
+  "offers": [
+    {
+      "id": "offer-1",
+      "values": {
+        "destination": "Rhodos",
+        "country": "Grecja",
+        "hotel": "Meliton",
+        "dates": "15.09.2025 - 22.09.2025 (7 noclegów)",
+        "people": "5 dorosłych + 0 dzieci",
+        "price": "14 444 zł (2 633 zł/os.)",
+        "room_details": "3 pokoje: 2x Pokój 2-osobowy (DZX1) - 22m², 1x Pokój 2-osobowy superior (DZX2) - 25m²",
+        "flight_details": "Wylot: WAW 15.09 05:55 → RHO 09:30 | Powrót: RHO 22.09 10:15 → WAW 12:05",
+        "hotel_code": "RHO10020",
+        "board": "All Inclusive",
+        "location": "Theologos, ok. 20km od centrum Rodos, 1,3km od plaży",
+        "rating": "Bardzo dobry (698 opinii)",
+        "amenities": "Darmowe Wi-Fi, Basen zewnętrzny, Jacuzzi, Kort tenisowy, Transfer na plażę"
+      }
+    }
+  ]
+}
