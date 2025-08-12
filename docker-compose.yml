@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: portfolio-web
+    container_name: wakacje
     restart: always
     ports:
       - "3003:3003"
