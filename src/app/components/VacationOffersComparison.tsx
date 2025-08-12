@@ -40,7 +40,7 @@ const getIcon = (iconName: string) => {
 };
 
 function slugify(label: string): string {
-    if (!label || typeof label !== 'string') return `col-${Date.now()}`;
+    if (!label) return `col-${Date.now()}`;
     return label
         .toLowerCase()
         .trim()
@@ -116,14 +116,14 @@ const isLinkField = (fieldId: string, label: string): boolean => {
 };
 
 const formatListValue = (value: string): string => {
-    if (!value || typeof value !== 'string') return '';
+    if (!value) return '';
     const lines = value.split('\n').filter(line => line.trim());
     if (lines.length <= 1) return value;
     return lines.map(line => line.startsWith('•') || line.startsWith('-') ? line : `• ${line.trim()}`).join('\n');
 };
 
 const formatProsConsValue = (value: string, isPositive: boolean = true): string => {
-    if (!value || typeof value !== 'string') return '';
+    if (!value) return '';
     const lines = value.split('\n').filter(line => line.trim());
     const icon = isPositive ? '✅' : '❌';
     return lines.map(line => `${icon} ${line.trim()}`).join('\n');
@@ -449,7 +449,7 @@ const VacationOffersComparison: React.FC = () => {
                                     <div className="text-left">
                                         <h3 className="font-semibold text-white mb-2">Jak zacząć?</h3>
                                         <ol className="text-slate-300 space-y-2 text-sm">
-                                            <li>1. Dodaj kategorie (np. "Lokalizacja", "Cena za osobę", "Hotel")</li>
+                                            <li>1. Dodaj kategorie (np. &#34;Lokalizacja&#34;, &#34;Cena za json&#34;, &#34;Hotel&#34;)</li>
                                             <li>2. Utwórz swoją pierwszą ofertę wakacyjną</li>
                                             <li>3. Wypełnij szczegóły i porównuj opcje</li>
                                         </ol>
